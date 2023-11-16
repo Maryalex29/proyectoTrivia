@@ -1,0 +1,53 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.respuestas {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.respuestas label {
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.respuestas input[type="radio"] {
+    appearance: none;
+}
+
+.respuestas input[type="radio"]:checked + label {
+    background-color: lightblue;
+    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+}
+
+.botonPregunta {
+    margin-top: 78px;
+}
+
+.correcta {
+    background-color: #61e17d !important;
+}
+
+.incorrecta {
+    background-color: #ff6666 !important;
+}

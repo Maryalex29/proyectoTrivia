@@ -1,0 +1,37 @@
+.formularioCategoria {
+    display: flex;
+    gap: 50px;
+}
+
+.botonCategoria {
+    height: 124px;
+    border: none;
+    color: #ffffff;
+    padding: 5px 44px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.botonCategoria:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+}
+
+.botonCultura {
+    background-color: #feb23f;
+}
+
+.botonPelicula {
+    background-color: #b71eff;
+}
