@@ -1,12 +1,15 @@
+// variables preguntas cultura
 const tituloPregunta = document.getElementById("tituloPregunta");
 const enunciado = document.getElementById("enunciado");
 const respuesta1 = document.getElementById("respuesta1");
 const respuesta2 = document.getElementById("respuesta2");
 const respuesta3 = document.getElementById("respuesta3");
-
 const radio = document.getElementsByName("respuesta");
+
+//nombre de usuario
 const campoNombre = document.getElementById("nombreUsuario");
 
+//preguntas cultura general
 const preguntasCultura = [
     {
         numeroPregunta: 1,
@@ -40,6 +43,8 @@ const preguntasCultura = [
     },
 ];
 
+// validar que el usuario ingrese el nombre y si no que muestre un mensaje
+// si ingreso bien el nombre redireciona a las categorias
 function redireccionarSiValor() {
     let campoValor = document.getElementById("nombre").value;
 
@@ -50,20 +55,27 @@ function redireccionarSiValor() {
         alert("El campo esta vació. Por favor ingrese un nombre.");
     }
 }
+
+// redirecionar a preguntas cultura general
 function redireccionarCultura() {
     window.location.href = "/vista/preguntas.html";
 }
+// redirecionar a preguntas peliculas
 function redireccionarPelicula() {
     window.location.href = "/vista/preguntasPelicula.html";
 }
+
+// redirecionar a pagina principal
 function redireccionarPrincipal() {
     window.location.href = "../index.html";
 }
 
+//declarar variable pregunta actual
 let preguntaActual = 0;
 
 campoNombre.textContent = "Hola " + localStorage.getItem("nombreUsuario");
 
+// funcion para mostrar pregunta cultura
 function mostrarPregunta() {
     tituloPregunta.textContent =
         "Pregunta " + preguntasCultura[preguntaActual].numeroPregunta;
@@ -81,6 +93,7 @@ function mostrarPregunta() {
 
 mostrarPregunta();
 
+// funcion para ir mostrando las demas preguntas de cultura
 function siguientePregunta() {
     preguntaActual++;
     if (preguntaActual < preguntasCultura.length) {
@@ -90,6 +103,7 @@ function siguientePregunta() {
     }
 }
 
+// funcion para validar respuesta correcta
 function validarPregunta() {
     let respuesta;
     for (let i = 0; i < radio.length; i++) {

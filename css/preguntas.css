@@ -1,11 +1,13 @@
-.formulario {
+.formulario,
+.formulario1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.respuestas {
+.respuestas,
+.respuestas1 {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -14,7 +16,8 @@
     gap: 10px;
 }
 
-.respuestas label {
+.respuestas label,
+.respuestas1 label {
     display: block;
     width: 100%;
     color: white;
@@ -27,11 +30,13 @@
     -o-border-radius: 20px;
 }
 
-.respuestas input[type="radio"] {
+.respuestas input[type="radio"],
+.respuestas1 input[type="radio"] {
     appearance: none;
 }
 
-.respuestas input[type="radio"]:checked + label {
+.respuestas input[type="radio"]:checked + label,
+.respuestas1 input[type="radio"]:checked + label {
     background-color: lightblue;
     transition: background-color 0.5s ease-in-out;
     -webkit-transition: background-color 0.5s ease-in-out;
